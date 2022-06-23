@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations -2</title>
+
+    <style>
+        .shoe {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(#56FDFE, #FF2169);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+        }
+
+        .shoe,
+        .shoe * {
+            transition: 400ms;
+        }
+
+        .shoe-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shoe-img h3 {
+            font-size: 1.5rem;
+        }
+
+        .shoe-img img {
+            width: 200px;
+            height: auto;
+        }
+
+        .shoe:hover .shoe-img {
+            transform: translateY(-40px);
+        }
+
+        .shoe:hover .shoe-img img {
+            transform: translate(-20px, -20px) rotate(-16deg) scale(1.2);
+        }
+
+        .info {
+            opacity: 0;
+            width: 300px;
+            text-align: center;
+        }
+
+        .shoe:hover .info {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shoe">
+        <div class="shoe-img">
+            <img src="shoe.png" alt="shoes-1">
+            <h3>Running Shoes</h3>
+        </div>
+        <div class="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, praesentium?
+        </div>
+    </div>
+</body>
+
+</html>
